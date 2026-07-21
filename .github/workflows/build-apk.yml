@@ -13,6 +13,7 @@ on:
       - src/**
       - public/**
       - scripts/**
+      - assets/**
 
 permissions:
   contents: read
@@ -56,6 +57,12 @@ jobs:
 
       - name: Create Android project
         run: pnpm exec cap add android
+
+      - name: Generate Android icons
+        run: >-
+          pnpm dlx @capacitor/assets generate --android
+          --iconBackgroundColor '#FBF8EF'
+          --iconBackgroundColorDark '#FBF8EF'
 
       - name: Sync Capacitor
         run: pnpm exec cap sync android
