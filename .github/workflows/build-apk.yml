@@ -60,7 +60,7 @@ jobs:
 
       - name: Generate Android icons
         run: >-
-          pnpm dlx @capacitor/assets generate --android
+          pnpm --allow-build=sharp dlx @capacitor/assets generate --android
           --iconBackgroundColor '#FBF8EF'
           --iconBackgroundColorDark '#FBF8EF'
 
