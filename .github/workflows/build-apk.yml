@@ -25,4 +25,6 @@ jobs:
           cache: pnpm
 
       - name: Setup Java
-        uses: actions
+        uses: actions/setup-java@v4
+        with:
+          distribution
